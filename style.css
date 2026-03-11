@@ -1,0 +1,148 @@
+/* ==============================
+   Reset y base
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   Fondo general
+================================ */
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ddd3c2, #eadfcd);
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #2b2b2b;
+    line-height: 1.8;
+    padding: 40px 20px;
+}
+
+
+/* ==============================
+   Header
+================================ */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* ==============================
+   Contenedor principal
+================================ */
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==============================
+   Carta
+================================ */
+.nota {
+    max-width: 935px;
+    background-color: #fffdf8;
+    padding: 60px 70px;
+    border-radius: 10px;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+    position: relative;
+    border: 1px solid #a3a3a3;
+}
+
+/* Borde superior suave (efecto hoja) */
+.nota::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 14px;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.06),
+            transparent);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* ==============================
+   Secciones
+================================ */
+section {
+    margin-bottom: 45px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* ==============================
+   Títulos
+================================ */
+section h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #252525;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 6px;
+}
+
+
+/* ==============================
+   Texto de la carta
+================================ */
+section p {
+    font-style: italic;
+    font-size: 1.05rem;
+    text-align: justify;
+    white-space: pre-line;
+    color: #505050;
+}
+
+
+/* ==============================
+   Footer
+================================ */
+.footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* ==============================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+    .nota {
+        padding: 40px 30px;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.15rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
