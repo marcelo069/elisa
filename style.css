@@ -1,15 +1,9 @@
-/* ==============================
-   Reset y base
-================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ==============================
-   Fondo general
-================================ */
 body {
     min-height: 100vh;
     background: linear-gradient(180deg, #ddd3c2, #eadfcd);
@@ -19,10 +13,6 @@ body {
     padding: 40px 20px;
 }
 
-
-/* ==============================
-   Header
-================================ */
 .header {
     text-align: center;
     margin-bottom: 50px;
@@ -41,17 +31,11 @@ body {
     font-style: italic;
 }
 
-/* ==============================
-   Contenedor principal
-================================ */
 .contenedor {
     display: flex;
     justify-content: center;
 }
 
-/* ==============================
-   Carta
-================================ */
 .nota {
     max-width: 935px;
     background-color: #fffdf8;
@@ -64,7 +48,6 @@ body {
     border: 1px solid #a3a3a3;
 }
 
-/* Borde superior suave (efecto hoja) */
 .nota::before {
     content: "";
     position: absolute;
@@ -79,9 +62,6 @@ body {
     border-top-right-radius: 6px;
 }
 
-/* ==============================
-   Secciones
-================================ */
 section {
     margin-bottom: 45px;
 }
@@ -90,9 +70,6 @@ section:last-child {
     margin-bottom: 0;
 }
 
-/* ==============================
-   Títulos
-================================ */
 section h2 {
     text-align: center;
     font-size: 1.3rem;
@@ -103,10 +80,6 @@ section h2 {
     padding-bottom: 6px;
 }
 
-
-/* ==============================
-   Texto de la carta
-================================ */
 section p {
     font-style: italic;
     font-size: 1.05rem;
@@ -115,10 +88,6 @@ section p {
     color: #505050;
 }
 
-
-/* ==============================
-   Footer
-================================ */
 .footer {
     text-align: center;
     margin-top: 35px;
@@ -126,9 +95,6 @@ section p {
     color: #666;
 }
 
-/* ==============================
-   Responsive
-================================ */
 @media (max-width: 768px) {
     .nota {
         padding: 40px 30px;
