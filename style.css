@@ -1,114 +1,198 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background: linear-gradient(135deg, #2c3e50, #1a252f);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 40px 0;
+
+    font-family: 'Georgia', serif;
 }
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(180deg, #ddd3c2, #eadfcd);
-    font-family: "Georgia", "Times New Roman", serif;
-    color: #2b2b2b;
-    line-height: 1.8;
-    padding: 40px 20px;
+/* CONTENEDOR */
+.contenedor {
+    margin-top: 40px;
 }
+
+/* CARTA */
+.carta {
+    position: relative;
+
+    width: 800px;
+
+    min-height: 250px;
+
+    cursor: pointer;
+
+    perspective: 1200px;
+}
+
+/* SOBRE */
+.sobre {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 250px;
+
+    background: #c0392b;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 -8px 15px rgba(0, 0, 0, 0.2);
+
+    overflow: visible;
+}
+
+/* TAPA */
+.tapa {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(#e74c3c, #c0392b);
+
+    clip-path: polygon(0 0, 100% 0, 50% 65%);
+
+    transform-origin: top;
+
+    transition: .9s;
+
+    z-index: 3;
+
+}
+
+/* PAPEL */
+
+.papel {
+
+    position: relative;
+
+    width: 92%;
+
+    min-height: 300px;
+
+    background: #fffdf7;
+
+    margin: auto;
+
+    margin-top: 20px;
+
+    border-radius: 6px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(120px);
+
+    transition: .9s;
+
+    z-index: 1;
+
+}
+
+/* CONTENIDO */
+
+.contenido {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #2c3e50;
+
+}
+
+/* PARRAFOS */
+
+.papel p {
+
+    margin-bottom: 25px;
+
+}
+
+/* HEADER */
 
 .header {
+
     text-align: center;
-    margin-bottom: 50px;
+
+    color: white;
+
 }
 
-.header h1 {
-    font-size: 2rem;
-    font-weight: normal;
-    letter-spacing: 1px;
+.titulo {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 38px;
+
     margin-bottom: 10px;
+
 }
 
 .subtitle {
-    font-size: 1rem;
-    color: #666;
-    font-style: italic;
+
+    opacity: .8;
+
 }
 
-.contenedor {
-    display: flex;
-    justify-content: center;
-}
-
-.nota {
-    max-width: 935px;
-    background-color: #fffdf8;
-    padding: 60px 70px;
-    border-radius: 10px;
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.12),
-        inset 0 0 0 1px rgba(0, 0, 0, 0.04);
-    position: relative;
-    border: 1px solid #a3a3a3;
-}
-
-.nota::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 14px;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.06),
-            transparent);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-section {
-    margin-bottom: 45px;
-}
-
-section:last-child {
-    margin-bottom: 0;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: normal;
-    margin-bottom: 5px;
-    color: #252525;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding-bottom: 6px;
-}
-
-section p {
-    font-style: italic;
-    font-size: 1.05rem;
-    text-align: justify;
-    white-space: pre-line;
-    color: #505050;
-}
+/* FOOTER */
 
 .footer {
-    text-align: center;
-    margin-top: 35px;
-    font-size: 0.95rem;
-    color: #666;
+
+    margin-top: 40px;
+
+    color: white;
+
+    opacity: .7;
+
 }
 
-@media (max-width: 768px) {
-    .nota {
-        padding: 40px 30px;
-    }
+/* EFECTO ABRIR */
 
-    .header h1 {
-        font-size: 1.6rem;
-    }
+.carta:hover .tapa {
 
-    section h2 {
-        font-size: 1.15rem;
-    }
+    transform: rotateX(180deg);
 
-    section p {
-        font-size: 1rem;
-    }
+}
+
+.carta:hover .papel {
+
+    transform: translateY(0);
+
+}
+
+/* EFECTO REALISTA EXTRA */
+
+.papel::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -15px;
+
+    left: 5%;
+
+    width: 90%;
+
+    height: 20px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    filter: blur(10px);
+
+    z-index: -1;
+
 }
