@@ -101,24 +101,24 @@ body {
 }
 
 /* PAPEL */
-.papel{
-position:relative;
-width:90%;
-margin:auto;
-margin-top:-140px;
-background:linear-gradient(#fffdf7,#fff8e8);
-border-radius:10px;
-padding:60px;
-border:1px solid rgba(0,0,0,.08);
-box-shadow: 0 25px 50px rgba(0,0,0,.35);
-/* estado cerrado */
-max-height:120px;
-overflow:hidden;
-transform:scaleY(.05);
-transform-origin:top;
-transition:1.2s cubic-bezier(.2,.8,.2,1);
-opacity:0;
-z-index:1;
+.papel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: -140px;
+    background: linear-gradient(#fffdf7, #fff8e8);
+    border-radius: 10px;
+    padding: 60px;
+    border: 1px solid rgba(0, 0, 0, .08);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .35);
+    /* estado cerrado */
+    max-height: 120px;
+    overflow: hidden;
+    transform: scaleY(.05);
+    transform-origin: top;
+    transition: 1.2s cubic-bezier(.2, .8, .2, 1);
+    opacity: 0;
+    z-index: 1;
 }
 
 /* SOMBRA PAPEL */
@@ -137,9 +137,11 @@ z-index:1;
 /* CONTENIDO */
 .contenido {
     font-family: 'Dancing Script', cursive;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 2;
     color: #2c3e50;
+    max-width: 650px;
+    margin: auto;
 }
 
 /* FIRMA */
@@ -166,13 +168,14 @@ z-index:1;
     opacity: 0;
 }
 
-#abrir:checked + .carta .papel{
-transform:
-translateY(260px)
-scaleY(1);
-opacity:1;
-max-height:5000px; /* permite crecer */
-overflow:visible;
+#abrir:checked+.carta .papel {
+    transform:
+    translateY(260px)
+    scaleY(1);
+    opacity: 1;
+    max-height: 5000px;
+    /* permite crecer */
+    overflow: visible;
 }
 
 /* RESPONSIVE */
@@ -180,33 +183,34 @@ overflow:visible;
     .carta {
         width: 95%;
     }
+
     .papel {
         padding: 35px;
     }
 }
 
 
-.bloque{
-margin-bottom:40px;
+.bloque {
+    margin-bottom: 40px;
 }
 
 /* TITULOS */
-.titulo-carta{
-text-align:center;
-font-family:'Playfair Display',serif;
-font-size:26px;
-margin-bottom:15px;
-color:#1f2a38;
-position:relative;
+.titulo-carta {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #1f2a38;
+    position: relative;
 }
 
 /* linea decorativa */
-.titulo-carta::after{
-content:"";
-display:block;
-width:120px;
-height:2px;
-background:#c0392b;
-margin:10px auto;
-opacity:.4;
+.titulo-carta::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: #c0392b;
+    margin: 10px auto;
+    opacity: .4;
 }
