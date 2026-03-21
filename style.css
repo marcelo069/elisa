@@ -101,24 +101,24 @@ body {
 }
 
 /* PAPEL */
-.papel {
-    position: relative;
-    width: 90%;
-    margin: auto;
-    margin-top: -140px;
-    background: linear-gradient(#fffdf7, #fff8e8);
-    border-radius: 10px;
-    padding: 30px;
-    border: 1px solid rgba(0, 0, 0, .08);
-    box-shadow:
-        0 25px 50px rgba(0, 0, 0, .35);
-    transform:
-        translateY(0) scaleY(.05);
-    transform-origin: top;
-    transition: 1.4s cubic-bezier(.2, .8, .2, 1);
-    opacity: .2;
-    z-index: 1;
-    min-height: 350px;
+.papel{
+position:relative;
+width:90%;
+margin:auto;
+margin-top:-140px;
+background:linear-gradient(#fffdf7,#fff8e8);
+border-radius:10px;
+padding:60px;
+border:1px solid rgba(0,0,0,.08);
+box-shadow: 0 25px 50px rgba(0,0,0,.35);
+/* estado cerrado */
+max-height:120px;
+overflow:hidden;
+transform:scaleY(.05);
+transform-origin:top;
+transition:1.2s cubic-bezier(.2,.8,.2,1);
+opacity:0;
+z-index:1;
 }
 
 /* SOMBRA PAPEL */
@@ -166,10 +166,13 @@ body {
     opacity: 0;
 }
 
-#abrir:checked+.carta .papel {
-    transform:
-        translateY(260px) scaleY(1);
-    opacity: 1;
+#abrir:checked + .carta .papel{
+transform:
+translateY(260px)
+scaleY(1);
+opacity:1;
+max-height:5000px; /* permite crecer */
+overflow:visible;
 }
 
 /* RESPONSIVE */
@@ -177,7 +180,6 @@ body {
     .carta {
         width: 95%;
     }
-
     .papel {
         padding: 35px;
     }
