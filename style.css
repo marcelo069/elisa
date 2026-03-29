@@ -173,7 +173,7 @@ body {
     translateY(260px)
     scaleY(1);
     opacity: 1;
-    max-height: 5000px;
+    max-height: max-content;
     /* permite crecer */
     overflow: visible;
 }
