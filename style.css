@@ -47,7 +47,7 @@ body {
 /* SOBRE */
 .sobre {
     position: relative;
-    width: 100%;
+    width: 105%;
     height: 260px;
     background: linear-gradient(#c0392b, #8e2a20);
     border-radius: 12px;
@@ -103,7 +103,7 @@ body {
 /* PAPEL */
 .papel {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: -140px;
     background: linear-gradient(#fffdf7, #fff8e8);
